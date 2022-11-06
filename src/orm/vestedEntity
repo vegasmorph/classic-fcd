@@ -1,0 +1,15 @@
+import { Column, Entity, PrimaryGeneratedColumn } from 'typeorm'
+
+@Entity('vested')
+export default class vestedEntity {
+  @PrimaryGeneratedColumn()
+  id: number
+
+  @Column()
+  datetime: Date
+
+  @Column()
+  denom: string
+
+  @Column('decimal', { precision: 40, scale: 10 })
+  amount: string
